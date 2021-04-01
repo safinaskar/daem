@@ -85,13 +85,4 @@ int main(int argc, char *argv[])
     char c;
     sh_x_read(pipefd[0], &c, 1);
   }
-
-  if (strcmp(argv[1], "konsole") == 0){ /* А другие Qt/KDE приложения? Может, это относится ко всем K(Q)UniquieApplication? Почему в программе "e" у kate стоит магическое число 0.1? */
-    struct timespec msec400;
-
-    msec400.tv_sec = 0;
-    msec400.tv_nsec = 400 * 1000 * 1000;
-
-    nanosleep(&msec400, NULL);
-  }
 }
